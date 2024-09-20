@@ -83,8 +83,22 @@ class Token:
         self._type: TokenType = token_type
         self._literal: str = litral
 
+    @property
+    def token_type(self) -> TokenType:
+        return self._type
+
+    @property
+    def literal(self) -> str:
+        return self._literal
+
     def __repr__(self) -> str:
         return f"Token ({self._type}, '{self._literal}')"
 
     def __eq__(self, other: object, /) -> bool:
-        return (self._type.value, self._literal) == (other._type.value, other._literal)
+        return (
+            self.token_type.value,
+            self.literal,
+        ) == (
+            other.token_type.value,
+            other.literal,
+        )

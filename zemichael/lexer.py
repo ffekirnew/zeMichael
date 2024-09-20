@@ -1,6 +1,6 @@
 from typing import Callable
 
-from zemichael.lexer.token import Token, TokenType
+from zemichael.datatypes.token import Token, TokenType
 
 
 class Lexer:

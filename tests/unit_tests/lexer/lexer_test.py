@@ -1,7 +1,7 @@
 import pytest
 
-from zemichael.lexer.lexer import Lexer
-from zemichael.lexer.token import Token, TokenType
+from zemichael.datatypes.token import Token, TokenType
+from zemichael.lexer import Lexer
 
 
 @pytest.mark.parametrize(

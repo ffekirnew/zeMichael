@@ -68,7 +68,7 @@ class Parser:
         return statement
 
     def _parse_if_statement(self) -> IfStatement:
-        """if (<condition>) <consequence> else <alternative>"""
+        """if (<condition>) {<consequence>} else {<alternative>}"""
         statement = IfStatement()
 
         statement.token = self._curr_token

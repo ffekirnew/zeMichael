@@ -18,6 +18,10 @@ class Program(Node):
     def __init__(self, statements: list[Statement]):
         self._statements: list[Statement] = statements
 
+    @property
+    def statements(self):
+        return self._statements
+
     def token_literal(self) -> str:
         if len(self._statements) > 0:
             return self._statements[0].token_literal()
